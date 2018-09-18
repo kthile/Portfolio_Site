@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css?family=Oleo+Script");
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+* {
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+#home {
+  background: url("../img/hero.jpeg") no-repeat 50% 50%;
+  background-size: cover;
+  display: table;
+}
+body {
+  font-family: Poppins;
+}
+.content {
+  margin-top: 12%;
+  margin-left: 50%;
+  display: flex;
+  flex-flow: column nowrap;
+  color: #fff;
+}
+.logo {
+  font-size: 16pt;
+  margin-bottom: -5%;
+}
+#subHeader {
+  max-width: 200px;
+}
+#subHeader p {
+  text-transform: uppercase;
+  font-size: 10pt;
+  text-align: left;
+  letter-spacing: 2px;
+  line-height: 1;
+  font-weight: 800;
+}
+.black_layer {
+  background: rgba(8, 8, 8, 0.11) no-repeat 50% 50%;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.content h1 {
+  font-family: Oleo Script;
+}
+.content p {
+  font-size: 7pt;
+  text-align: justify;
+  margin-right: 18%;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.content ul {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.content ul li {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 15px;
+  font-weight: 800;
+  letter-spacing: 1.3px;
+  text-transform: uppercase;
+}
+.italic {
+  font-style: italic;
+}
+a,
+a:visited {
+  font-size: 8pt;
+  text-decoration: none;
+  color: #fff;
+}
+
+a:hover {
+  opacity: 0.5;
+  transition-duration: 500ms;
+}
+
+.content i {
+  font-size: 12pt;
+  margin: 0 3px;
+}
+
+i:hover {
+  opacity: 0.5;
+  transition-duration: 400ms;
+}
+
+#links {
+  margin-top: 20px;
+}
+
+/* Work.html code */
+#work {
+  background: #000;
+}
+.gallery {
+  color: #fff;
+}
+.gallery h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+hr {
+  color: rgba(14, 14, 14, 0.329);
+}
+.gallery_image {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  overflow: hidden;
+}
+
+.gallery_image img {
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  max-height: 100%;
+  box-shadow: -1px 0px 0px rgba(0, 0, 0, 0.06);
+}
+
+.text_overlay {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  overflow: hidden;
+}
+
+.label {
+  width: 100%;
+  height: 100%;
+}
+
+.slider {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /*height:100%*/
+  overflow: hidden;
+  position: relative;
+}
+.slider > * {
+  display: block;
+  /* width: 100%;
+  height: 100%;*/
+  overflow: hidden;
+}
+
+#slide1 {
+  height: 100vh;
+  max-width: auto;
+  background: url(../../dist/img/slider1.jpg) no-repeat center center / cover;
+}
+#slide2 {
+  height: 100vh;
+  max-width: auto;
+  background: url(../../dist/img/slider2.jpg) no-repeat center center / cover;
+}
+
+#slide3 {
+  height: 100vh;
+  max-width: auto;
+  background: url(../../dist/img/slider3.jpg) no-repeat center center / cover;
+}
+#slide4 {
+  height: 100vh;
+  max-width: auto;
+  background: url(../../dist/img/slider4.jpg) no-repeat center center / cover;
+}
+#slide5 {
+  height: 100vh;
+  max-width: auto;
+  background: url(../../dist/img/slider5.jpg) no-repeat center center / contain;
+}
+#slide6 {
+  height: 100vh;
+  max-width: auto;
+  background: url(../../dist/img/slider6.jpg) no-repeat center center / contain;
+}
+#slide7 {
+  height: 100vh;
+  max-width: auto;
+  background: url(../../dist/img/slider7.jpg) no-repeat center center / cover;
+}
+/* Footer code */
+footer {
+  width: 100%;
+  height: 15px;
+  background-color: rgba(19, 19, 19, 0.541);
+  text-align: center;
+  font-size: 8pt;
+  color: #fff;
+}
+figcaption {
+  text-align: center;
+}
+/* Header code */
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 25px;
+}
+nav {
+  width: 100%;
+  height: 25px;
+  position: static;
+  z-index: 1;
+}
+#toggle {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 999;
+  width: 30px;
+  height: 10px;
+  cursor: pointer;
+  float: right;
+  transition: all 0.3s ease-out;
+}
+
+#toggle .span {
+  height: 3px;
+  background: #fff;
+  transition: all 0.3s ease-out;
+  margin: 5px auto;
+}
+#toggle.on #one {
+  transform: rotate(45deg) translateX(2px) translateY(3px);
+  /* background: red;*/
+}
+#toggle.on #two {
+  opacity: 0;
+}
+#toggle.on #three {
+  transform: rotate(-45deg) translateX(8px) translateY(-10px);
+  /*background: red;*/
+}
+/* Toggle menu */
+#resize {
+  opacity: 0;
+  top: 0px;
+  margin-top: 10%;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.719);
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+  transition: all 1s ease-out;
+  display: table;
+}
+
+#resize #menu {
+  margin: 0;
+  padding: 0;
+  /* height: 90px; */
+  display: table-cell;
+  vertical-align: center;
+}
+
+#resize #menu li {
+  display: block;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+#resize #menu li:hover {
+  background: rgba(20, 20, 20, 0.904);
+}
+
+#resize #menu li a {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 18pt;
+}
+
+#resize.active {
+  visibility: visible;
+  opacity: 0.99;
+  z-index: 111;
+}
+
+/*.slick-dots {
+  font-size: 16px;
+  color: #fff;
+  opacity: 1;
+}*/
+
+.slick-prev {
+  margin-left: 25px;
+  z-index: 10;
+}
+.slick-next {
+  z-index: 10;
+}
+
+/*Contact.html code*/
+#contact {
+  background: rgb(0, 0, 0);
+  color: #fff;
+}
+.contact_container {
+  max-width: 900px;
+  width: 100%;
+  margin: 10% auto;
+  display: flex;
+  flex-flow: column wrap;
+}
+
+#logo {
+  font-size: 30pt;
+  letter-spacing: 5px;
+  text-align: center;
+  font-family: Oleo Script;
+}
+.form {
+  margin: 0 30%;
+}
+.form textarea {
+  height: 200px;
+}
+.message {
+  margin-top: 40px;
+  padding: 10px 100px 10px 50px;
+}
+.contact_container p {
+  text-align: justify;
+}
+
+/*MEDIA QUERIES*/
+
+/* ----------- Galaxy S6 ----------- */
+
+/* Portrait and Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) {
+}
+
+/* Portrait */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 4) and (orientation: landscape) {
+}
+
+/* ----------- iPhone 6+, 7+ and 8+ ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+
+/* ----------- iPhone X ----------- */
+
+/* Portrait and Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+}
+
+/* Portrait */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: portrait) {
+}
+
+/* Landscape */
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) and (orientation: landscape) {
+}
+
+/* ----------- Laptop Screens ----------- */
+@media screen and (min-device-width: 1200px) and (max-device-width: 1600px) and (-webkit-min-device-pixel-ratio: 2) and (min-resolution: 192dpi) {
+}

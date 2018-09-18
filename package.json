@@ -1,0 +1,12 @@
+{
+  "name": "mary_portfolio",
+  "version": "1.0.0",
+  "description": "Mary's Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Khang Thi-Le",
+  "license": "MIT"
+}
