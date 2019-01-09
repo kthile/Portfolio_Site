@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Allura");
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
 @import url("https://fonts.googleapis.com/css?family=Poppins");
 * {
   box-sizing: border-box;
@@ -16,7 +17,9 @@ ul {
   margin: 0;
 }
 
+
 /* Index.html Code */
+
 #home {
   background: url("../img/heroalt.jpg") no-repeat 50% 50%;
   background-size: cover;
@@ -37,18 +40,33 @@ body {
   min-height: 100vh;
 }
 #content h1 {
-  font-family: Allura;
+  font-family: Permanent Marker;
   font-size: 70pt;
   font-weight: 100;
+  text-align: center;
+}
+@media (min-width: 280px) and (max-width: 320px) {
+  #content h1 {
+    font-size: 60pt;
+  }
+  #back_layer {
+    font-size: 70pt;
+  }
+  #profession {
+    font-size: 13pt !important;
+  }
+  #icons i {
+    font-size: 20pt;
+  }
 }
 /*text shadow for h1*/
 #back_layer {
   position: absolute;
-  font-size: 105pt;
+  font-size: 85pt;
   letter-spacing: 10px;
   opacity: 0.1;
-  font-family: Allura;
-  z-index: -111;
+  font-family: Permanent Marker;
+  z-index: -1;
 }
 #myName {
   font-size: 20pt;
@@ -79,6 +97,7 @@ body {
   padding: 0;
 }
 #links ul li {
+  color: rgb(0, 0, 0);
   font-size: 13pt;
   list-style: none;
   text-align: center;
@@ -111,7 +130,7 @@ a:hover {
   display: block;
   width: 0;
   height: 2px;
-  background: #000;
+  background: rgb(0, 0, 0);
   transition: width 0.3s;
 }
 
@@ -135,7 +154,8 @@ i:hover {
 
 /* Work.html code */
 #work {
-  background: #000;
+  background-color: #000;
+  background-image: url("data:image/svg+xml,%3Csvg width='70' height='100' viewBox='30 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23787878' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 .gallery figcaption {
   color: #fff;
@@ -179,8 +199,8 @@ hr {
 
 .slider {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: 80%;
   /*height:100%*/
   overflow: hidden;
   position: relative;
@@ -190,17 +210,21 @@ hr {
   /* width: 100%;
   height: 100%;*/
   overflow: hidden;
+  
 }
 
 #slide1 {
   height: 100vh;
   max-width: auto;
-  background: url(../../dist/img/slider1.jpg) no-repeat center center / contain;
+  background: url(../../dist/img/slider1.jpg)
+    no-repeat center center / contain;
+    
 }
 #slide2 {
   height: 100vh;
   max-width: auto;
-  background: url(../../dist/img/slider2.jpg) no-repeat center center / contain;
+  background: url(../../dist/img/slider2.jpg)
+    no-repeat center center / contain;
 }
 
 #slide3 {
@@ -256,7 +280,7 @@ nav {
   position: static;
   z-index: 1;
 }
-#toggle {
+.toggle {
   position: absolute;
   right: 20px;
   top: 20px;
@@ -267,25 +291,25 @@ nav {
   float: right;
   transition: all 0.3s ease-out;
 }
-#toggle .span {
+.toggle .span {
   height: 3px;
   background: #fff;
   transition: all 0.3s ease-out;
   margin: 5px auto;
 }
-#toggle.on #one {
+.toggle.on #one {
   transform: rotate(45deg) translateX(2px) translateY(3px);
   /* background: red;*/
 }
-#toggle.on #two {
+.toggle.on #two {
   opacity: 0;
 }
-#toggle.on #three {
+.toggle.on #three {
   transform: rotate(-45deg) translateX(8px) translateY(-10px);
   /*background: red;*/
 }
 /* Toggle menu */
-#resize {
+.resize {
   opacity: 0;
   top: 0px;
   margin-top: 10%;
@@ -297,14 +321,14 @@ nav {
   transition: all 1s ease-out;
   display: table;
 }
-#resize #menu {
+.resize .menu {
   margin: 0;
   padding: 0;
   /* height: 90px; */
   display: table-cell;
   vertical-align: center;
 }
-#resize #menu li {
+.resize .menu li {
   display: block;
   text-align: center;
   font-size: 50px;
@@ -312,16 +336,16 @@ nav {
   cursor: pointer;
   transition: all 0.3s ease-out;
 }
-#resize #menu li:hover {
+.resize .menu li:hover {
   background: rgba(20, 20, 20, 0.904);
 }
-#resize #menu li a {
+.resize .menu li a {
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 18pt;
 }
-#resize.active {
+.resize.active {
   visibility: visible;
   opacity: 0.99;
   z-index: 111;
@@ -333,10 +357,10 @@ nav {
 .slick-next {
   z-index: 10;
 }
-
 /*contact.html code - new*/
 #contact {
-  background: #ffffff;
+  background-color: #000000;
+  background-image: url("data:image/svg+xml,%3Csvg width='70' height='100' viewBox='30 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23787878' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
   color: #000000;
   line-height: 1.6;
   padding: 1em;
@@ -345,6 +369,7 @@ nav {
   max-width: 1170px;
   margin: 0 auto;
   padding: 1em;
+  color: #fff;
 }
 .brand {
   text-align: center;
@@ -352,32 +377,35 @@ nav {
   font-size: 30pt;
 }
 .brand span {
-  color: rgb(100, 99, 99);
+  color: rgb(151, 151, 151);
 }
 .wrapper {
-  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.13);
+  box-shadow: 0 0 20px 0 rgba(105, 105, 105, 0.384);
 }
 .wrapper > * {
   padding: 1em;
 }
-
 .company-info {
   background: #000000;
   color: #fff;
+  border: 1px solid #fff;
 }
-
 .company-info h3,
 .company-info ul {
   text-align: center;
   margin: 0 0 1rem 0;
 }
-
 .contact {
   background: #ffffff;
+  color: #000;
 }
-
 /*form styles*/
-
+.spanv2 {
+  height: 3px;
+  background: rgb(0, 0, 0);
+  transition: all 0.3s ease-out;
+  margin: 5px auto;
+}
 .contact form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -400,7 +428,6 @@ nav {
   border: 1px solid #000000;
   resize: none;
 }
-
 .contact form button {
   background: #000000;
   color: #fff;
@@ -408,7 +435,6 @@ nav {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
-
 .contact form button:hover,
 .contact form button:focus {
   background: #727272;
@@ -416,7 +442,6 @@ nav {
   outline: 0;
   transition: background-color 2s ease-out;
 }
-
 .alert {
   text-align: center;
   padding: 10px;
@@ -426,6 +451,16 @@ nav {
   margin-bottom: 10px;
   display: none;
 }
+/*I got lazy, add hamburger menu */
+#homeIcon a {
+  font-size: 20pt;
+  padding: 10px;
+  color: #fff;
+}
+/* hamburger menu */
+
+/* TODO: fix this, change to a class */
+/* hamburger for contact */
 
 /* Larger screen form*/
 @media (min-width: 700px) {
